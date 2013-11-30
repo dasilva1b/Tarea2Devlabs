@@ -1,0 +1,29 @@
+<h1> Pregunta 8 </h1>
+<p>
+Se le especifica a nginx que escuche a traves del puerto 80 los requests del server que lleva por nombre
+talpor.com y que dicho request sea manejado por el y que sea reescrito en la forma en que se especifica alli:
+con https://....
+
+En apache tendriamos algo similar a lo siguiente:
+<br></br>
+    Listen 80
+<br></br>
+
+    NameVirtualHost *:80
+<br></br>
+
+   &lt VirtualHost *:80 &gt
+<br></br>
+
+      ServerName talpor.com
+<br></br>
+
+      ServerAlias www.talpor.com
+<br></br>
+
+      Redirect permanent / https://talpor.com/
+   &lt &frasl;  VirtualHost &gt
+<br></br>
+
+
+</p>
